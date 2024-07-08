@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr 10fr auto;
+	grid-template-columns: 1fr;
+}
+
+body>header,
+footer {
+	background-color: #f0f0f0;
+	padding: 0 10px;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 130px auto;
+	align-items: center;
+}
+
+footer img {
+	width: 120px;
+}
+
+main {
+	background-color: #fff;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+main img {
+	max-width: 80vw;
+}
+
+main ul li {
+	list-style: none !important;
+}
+
+.metadata span {
+	margin-right: 1em;
+}
+
+main p {
+	text-indent: 2em;
+}
+
+.print {
+	display: none;
+}
+
+.watermark {
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/image/watermark.jpg');
+	background-repeat: repeat-y;
+	background-position: top;
+	background-size: contain;
+	z-index: -1;
+}
+
+@media print {
+	@page {
+		size: A4;
+		margin: 0;
+	}
+
+	body {
+		font-size: 12pt;
+		font-family: "Times New Roman", "SimSun", "STSong";
+	}
+
+	main {
+		line-height: 20px;
+	}
+
+
+	/*show watermark image for print*/
+	* {
+		-webkit-print-color-adjust: exact !important;
+		color-adjust: exact !important;
+	}
+
+	a {
+		cursor: default;
+		pointer-events: none !important;
+		text-decoration: none;
+		color: #373c44 !important;
+	}
+
+	.normal {
+		display: none;
+	}
+
+	.print {
+		display: block;
+	}
+
+	.metadata span:last-child {
+		display: none;
+	}
+}
