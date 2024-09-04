@@ -23,6 +23,7 @@ footer img {
 }
 
 main {
+	line-height: 30px;
 	background-color: #fff;
 	padding: 20px;
 	overflow-y: auto;
@@ -42,6 +43,7 @@ main ul li {
 
 main p {
 	text-indent: 2em;
+	margin-bottom: 0.2em;
 }
 
 main em {
@@ -51,9 +53,23 @@ main em {
 	border-bottom: 1px solid #373c44;
 }
 
+main ol {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+main ol li {
+	width: 50%;
+}
+
+main hr {
+	margin: 0.5em 0;
+}
+
 main .cloze-option {
 	border: 1px solid #000;
-	padding: 1em 0.2em;
+	padding: 0.5em 0.2em;
 	text-align: center;
 	text-indent: 0;
 }
@@ -87,8 +103,14 @@ main .cloze-option {
 		font-family: "Times New Roman", "SimSun", "STSong";
 	}
 
-	main {
-		line-height: 20px;
+	body>header{
+		height: 4.8em;
+		padding: 10px;
+	}
+
+	.container-fluid {
+		padding-top:0;
+		margin-top:-1em;
 	}
 
 	.watermark {
