@@ -54,7 +54,7 @@ main em {
 }
 
 main ol {
-	display: table;
+	display: block;
 	counter-reset: section;
 	list-style-type: none;
 	/*flex-direction: row;*/
@@ -63,7 +63,7 @@ main ol {
 
 main ol li {
 	display: inline-block;
-	width: 50%;
+	width: 42vw;
 }
 
 main ol li::before {
