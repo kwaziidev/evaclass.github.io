@@ -54,13 +54,21 @@ main em {
 }
 
 main ol {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	display: table;
+	counter-reset: section;
+	list-style-type: none;
+	/*flex-direction: row;*/
+	/*flex-wrap: wrap;*/
 }
 
 main ol li {
+	display: inline-block;
 	width: 50%;
+}
+
+main ol li::before {
+	counter-increment: section;
+	content: counters(section, '.') '. ';
 }
 
 main hr {
@@ -103,14 +111,14 @@ main .cloze-option {
 		font-family: "Times New Roman", "SimSun", "STSong";
 	}
 
-	body>header{
+	body>header {
 		height: 4.8em;
 		padding: 10px;
 	}
 
 	.container-fluid {
-		padding-top:0;
-		margin-top:-1em;
+		padding-top: 0;
+		margin-top: -1em;
 	}
 
 	.watermark {
