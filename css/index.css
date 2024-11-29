@@ -149,4 +149,13 @@ main .cloze-option {
 	.metadata span:last-child {
 		display: none;
 	}
+
+	/* 隐藏高频词 */
+
+	/*hr:last-of-type +p{*/
+	/*	display:none;*/
+	/*}*/
+	/*main ol {*/
+	/*	display:none;*/
+	/*}*/
 }
